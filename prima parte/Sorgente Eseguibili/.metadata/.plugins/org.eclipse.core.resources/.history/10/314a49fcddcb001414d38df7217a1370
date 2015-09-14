@@ -1,0 +1,3 @@
+src/functions.d: ../src/functions.cpp ../src/functions.hpp
+
+../src/functions.hpp:

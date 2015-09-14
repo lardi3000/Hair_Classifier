@@ -1,0 +1,77 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+#container{
+	overflow:hidden;
+	margin-left:3px;
+}
+.canvas_container{
+	border: 3px solid black;
+	width:500px;
+	float:left;
+}
+#canvas_container_1{	
+	background-color:#666666;
+	background-repeat:no-repeat;
+	
+}
+#canvas_container_2{
+	background-color:#666666;
+	border-left:none;
+	
+}
+
+.menu_bar{
+	overflow:hidden;	
+	clear:both;
+}
+.text_menu{
+	float:left;
+	height:35px;
+	line-height:35px;
+}
+.menu_bar a{
+	float:left;
+	height:35px;
+	width:35px;
+	margin:3px;
+	border: solid #666666 1px;
+}
+
+#fg_btn{
+	background-image:url('images/tools/fg_btn.png');	
+}
+#bg_btn{
+	background-image:url('images/tools/bg_btn.png');
+}
+#plus_btn{
+	background-image:url('images/tools/plus-icon.png');	
+}
+#minus_btn{
+	background-image:url('images/tools/minus-icon.png');
+}
+#clear_btn{
+	background-image:url('images/tools/clear_btn.png');
+}
+#import_btn{
+	background-image:url('images/tools/home.jpg');
+}
+#hair_btn{
+	background-image:url('images/tools/hair_btn.png');
+}
+#prev_btn{
+	background-image:url('images/tools/prev_btn.png');
+}
+#next_btn{
+	background-image:url('images/tools/next_btn.png');
+}
+#upload_btn{
+	background-image:url('images/tools/upload_btn.png');
+}
+#loading_image{
+	position:absolute;
+	top:250;
+	left:700;
+}
+

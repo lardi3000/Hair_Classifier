@@ -1,0 +1,38 @@
+14:11:28 **** Clean-only build of configuration Debug for project resize2 ****
+make clean 
+rm -rf  ./src/functions.o ./src/main.o  ./src/functions.d ./src/main.d  resize2
+ 
+14:11:28 **** Build of configuration Debug for project resize2 ****
+make all 
+Building file: ../src/functions.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/opencv -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/functions.d" -MT"src/functions.d" -o "src/functions.o" "../src/functions.cpp"
+Finished building: ../src/functions.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/opencv -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: resize2
+Invoking: Cross G++ Linker
+g++  -o "resize2"  ./src/functions.o ./src/main.o   -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: resize2
+ 
+14:11:51 **** Incremental Build of configuration Debug for project resize2 ****
+make all 
+Building file: ../src/functions.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/opencv -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/functions.d" -MT"src/functions.d" -o "src/functions.o" "../src/functions.cpp"
+Finished building: ../src/functions.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/opencv -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: resize2
+Invoking: Cross G++ Linker
+g++  -o "resize2"  ./src/functions.o ./src/main.o   -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: resize2
+ 

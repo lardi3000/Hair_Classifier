@@ -1,0 +1,162 @@
+
+
+Iniziata l'elaborazine del bin 1 di 10.
+
+Terminata la fase di test per il bin 1!
+Tempo necessario per il calcolo delle features: 304.87 s.
+Tempo necessario per l'addestramento dell'SVM: 0.35309 s.
+Tempo necessario per la fase di test: 33.1357 s.
+Tempo medio per il test di una singola immagine: 3.31357 s.
+Accuracy: 70.7504 %
+Percentuale capelli riconosciuti: 57.4469 %
+Percentuale sfondo riconosciuto: 83.0606 %
+Accuracy con post processing: 75.9813 %
+Percentuale capelli riconosciuti con post processing: 56.5994 %
+Percentuale sfondo riconosciuto con post processing: 91.2448 %
+
+
+Iniziata l'elaborazine del bin 2 di 10.
+
+Terminata la fase di test per il bin 2!
+Tempo necessario per il calcolo delle features: 285.137 s.
+Tempo necessario per l'addestramento dell'SVM: 0.382143 s.
+Tempo necessario per la fase di test: 31.3994 s.
+Tempo medio per il test di una singola immagine: 3.13994 s.
+Accuracy: 71.6783 %
+Percentuale capelli riconosciuti: 71.38 %
+Percentuale sfondo riconosciuto: 73.1071 %
+Accuracy con post processing: 155.731 %
+Percentuale capelli riconosciuti con post processing: 135.472 %
+Percentuale sfondo riconosciuto con post processing: 170.251 %
+
+
+Iniziata l'elaborazine del bin 3 di 10.
+
+Terminata la fase di test per il bin 3!
+Tempo necessario per il calcolo delle features: 284.983 s.
+Tempo necessario per l'addestramento dell'SVM: 0.370978 s.
+Tempo necessario per la fase di test: 33.3735 s.
+Tempo medio per il test di una singola immagine: 3.33735 s.
+Accuracy: 72.1467 %
+Percentuale capelli riconosciuti: 63.6722 %
+Percentuale sfondo riconosciuto: 74.7768 %
+Accuracy con post processing: 236.874 %
+Percentuale capelli riconosciuti con post processing: 201.183 %
+Percentuale sfondo riconosciuto con post processing: 255.216 %
+
+
+Iniziata l'elaborazine del bin 4 di 10.
+
+Terminata la fase di test per il bin 4!
+Tempo necessario per il calcolo delle features: 332.396 s.
+Tempo necessario per l'addestramento dell'SVM: 0.373205 s.
+Tempo necessario per la fase di test: 29.7957 s.
+Tempo medio per il test di una singola immagine: 2.97957 s.
+Accuracy: 71.6743 %
+Percentuale capelli riconosciuti: 66.8683 %
+Percentuale sfondo riconosciuto: 71.8828 %
+Accuracy con post processing: 320.109 %
+Percentuale capelli riconosciuti con post processing: 272.889 %
+Percentuale sfondo riconosciuto con post processing: 339.09 %
+
+
+Iniziata l'elaborazine del bin 5 di 10.
+
+Terminata la fase di test per il bin 5!
+Tempo necessario per il calcolo delle features: 284.886 s.
+Tempo necessario per l'addestramento dell'SVM: 0.406747 s.
+Tempo necessario per la fase di test: 30.4281 s.
+Tempo medio per il test di una singola immagine: 3.04281 s.
+Accuracy: 70.6076 %
+Percentuale capelli riconosciuti: 63.1759 %
+Percentuale sfondo riconosciuto: 71.4783 %
+Accuracy con post processing: 400.015 %
+Percentuale capelli riconosciuti con post processing: 334.804 %
+Percentuale sfondo riconosciuto con post processing: 420.314 %
+
+
+Iniziata l'elaborazine del bin 6 di 10.
+
+Terminata la fase di test per il bin 6!
+Tempo necessario per il calcolo delle features: 284.87 s.
+Tempo necessario per l'addestramento dell'SVM: 0.367353 s.
+Tempo necessario per la fase di test: 35.5012 s.
+Tempo medio per il test di una singola immagine: 3.55012 s.
+Accuracy: 69.669 %
+Percentuale capelli riconosciuti: 51.5979 %
+Percentuale sfondo riconosciuto: 73.0724 %
+Accuracy con post processing: 477.295 %
+Percentuale capelli riconosciuti con post processing: 377.603 %
+Percentuale sfondo riconosciuto con post processing: 503.446 %
+
+
+Iniziata l'elaborazine del bin 7 di 10.
+
+Terminata la fase di test per il bin 7!
+Tempo necessario per il calcolo delle features: 286.474 s.
+Tempo necessario per l'addestramento dell'SVM: 0.39377 s.
+Tempo necessario per la fase di test: 29.7121 s.
+Tempo medio per il test di una singola immagine: 2.97121 s.
+Accuracy: 73.6218 %
+Percentuale capelli riconosciuti: 65.7871 %
+Percentuale sfondo riconosciuto: 75.9141 %
+Accuracy con post processing: 559.139 %
+Percentuale capelli riconosciuti con post processing: 446.364 %
+Percentuale sfondo riconosciuto con post processing: 587.926 %
+
+
+Iniziata l'elaborazine del bin 8 di 10.
+
+Terminata la fase di test per il bin 8!
+Tempo necessario per il calcolo delle features: 284.323 s.
+Tempo necessario per l'addestramento dell'SVM: 0.373514 s.
+Tempo necessario per la fase di test: 32.2246 s.
+Tempo medio per il test di una singola immagine: 3.22246 s.
+Accuracy: 74.4465 %
+Percentuale capelli riconosciuti: 52.635 %
+Percentuale sfondo riconosciuto: 78.0895 %
+Accuracy con post processing: 641.926 %
+Percentuale capelli riconosciuti con post processing: 492.993 %
+Percentuale sfondo riconosciuto con post processing: 676.438 %
+
+
+Iniziata l'elaborazine del bin 9 di 10.
+
+Terminata la fase di test per il bin 9!
+Tempo necessario per il calcolo delle features: 284.783 s.
+Tempo necessario per l'addestramento dell'SVM: 0.37923 s.
+Tempo necessario per la fase di test: 33.5804 s.
+Tempo medio per il test di una singola immagine: 3.35804 s.
+Accuracy: 74.8334 %
+Percentuale capelli riconosciuti: 62.6499 %
+Percentuale sfondo riconosciuto: 81.9536 %
+Accuracy con post processing: 722.835 %
+Percentuale capelli riconosciuti con post processing: 556.343 %
+Percentuale sfondo riconosciuto con post processing: 766.434 %
+
+
+Iniziata l'elaborazine del bin 10 di 10.
+
+Terminata la fase di test per il bin 10!
+Tempo necessario per il calcolo delle features: 266.758 s.
+Tempo necessario per l'addestramento dell'SVM: 0.316478 s.
+Tempo necessario per la fase di test: 46.9729 s.
+Tempo medio per il test di una singola immagine: 4.69729 s.
+Accuracy: 71.473 %
+Percentuale capelli riconosciuti: 64.2588 %
+Percentuale sfondo riconosciuto: 73.925 %
+Accuracy con post processing: 803.001 %
+Percentuale capelli riconosciuti con post processing: 624.075 %
+Percentuale sfondo riconosciuto con post processing: 849.562 %
+
+Programma terminato!
+Tempo necessario per il calcolo delle features: 2899.48 s.
+Tempo necessario per l'addestramento dell'SVM: 3.71651 s.
+Tempo necessario per la fase di test: 336.124 s.
+Tempo medio per il test di una singola immagine: 3.20118 s.
+Accuracy: 72.0901 %
+Percentuale capelli riconosciuti: 61.9472 %
+Percentuale sfondo riconosciuto: 75.726 %
+Accuracy con post processing: 80.3001 %
+Percentuale capelli riconosciuti con post processing: 62.4075 %
+Percentuale sfondo riconosciuto con post processing: 84.9562 %

@@ -1,0 +1,5 @@
+src/main.d: ../src/main.cpp ../src/main.hpp ../src/functions.hpp
+
+../src/main.hpp:
+
+../src/functions.hpp:

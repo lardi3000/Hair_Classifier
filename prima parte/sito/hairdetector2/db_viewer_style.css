@@ -1,0 +1,17 @@
+.img_container{
+	overflow:hidden;
+	padding:10px;
+}
+.img_container img{
+	float:left;
+	//margin-right:10px;
+	border:2px green solid;
+	margin-left:10px;
+}
+.delete_img{
+	background-image:url('images/tools/delete.jpg');
+	width:35px;
+	height:35px;
+	float:left;
+	margin-left:10px;
+}
