@@ -53,7 +53,7 @@ First is the creation of the training set. The calculation of the features occur
 ![alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20seconda%20parte/frame00025.jpg?raw=true)
 image 6
 
-![alt tag]https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20seconda%20parte/cropped.jpg?raw=true)
+![alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20seconda%20parte/cropped.jpg?raw=true)
 image 7
 
 The first feature, HOG, splits the image into cells and associates to every cell the histogram of the directions of the gradients inside. The function to calculate HOG, in addition to the openCv function, also normalize the cells, keeping a single set of values (which represent the histogram) per cell. Various tests have shown that the best setting is 5 bins and size of cells to 31. So we can associate 5 descriptors to every cell. The image 8 shows the main gradients of every cell.
@@ -110,48 +110,49 @@ image 14
 ![alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20seconda%20parte/frame00025_confusion%20con%20post%20processing.jpg?raw=true)
 image 15
 
+
 This are the result of our tests using a database of 115 images with 10-fold cross-validation:
 
-•	Time to compute the features: 2899,48 s.
-•	Time to train the decision tree: 3,72 s.
-•	Time to test the images: 336,12 s.
-•	Mean time to test an image: 3,2 s.
-•	Accuracy: 72,09 %.
-•	Percentage of hair recognised: 61,94 %.
-•	Percentage of background recognised: 75,73 %.
-•	Accuracy using the post processing: 80,3 %.
-•	Percentage of hair recognised using the post processing : 62,41 %.
-•	Percentage of background recognised using the post processing : 84,96 %.
+*	Time to compute the features: 2899,48 s.
+*	Time to train the decision tree: 3,72 s.
+*	Time to test the images: 336,12 s.
+*	Mean time to test an image: 3,2 s.
+*	Accuracy: 72,09 %.
+*	Percentage of hair recognised: 61,94 %.
+*	Percentage of background recognised: 75,73 %.
+*	Accuracy using the post processing: 80,3 %.
+*	Percentage of hair recognised using the post processing : 62,41 %.
+*	Percentage of background recognised using the post processing : 84,96 %.
 
 Finally the result of our tests using a database of 1000 images with 10-fold cross-validation:
 
-•	Time to compute the features: 14495,5 s.
-•	Time to train the decision tree: 22,909 s.
-•	Time to test the images: 1590,98 s.
-•	Mean time to test an image: 1,59 s.
-•	Accuracy: 79,45 %.
-•	Percentage of hair recognised: 76,13 %.
-•	Percentage of background recognised: 79,61 %.
-•	Accuracy using the post processing: 84,86 %.
-•	Percentage of hair recognised using the post processing : 77,45 %.
-•	Percentage of background recognised using the post processing : 84,88 %.
+*	Time to compute the features: 14495,5 s.
+*	Time to train the decision tree: 22,909 s.
+*	Time to test the images: 1590,98 s.
+*	Mean time to test an image: 1,59 s.
+*	Accuracy: 79,45 %.
+*	Percentage of hair recognised: 76,13 %.
+*	Percentage of background recognised: 79,61 %.
+*	Accuracy using the post processing: 84,86 %.
+*	Percentage of hair recognised using the post processing : 77,45 %.
+*	Percentage of background recognised using the post processing : 84,88 %.
 
 
 ##Useful link and references:
 
 ###General arguments:
-•	http://opencv.org/
+*	http://opencv.org/
 
 ###Gabor filter:
-•	https://cvtuts.wordpress.com/2014/04/27/gabor-filters-a-practical-overview/
-•	http://answers.opencv.org/question/1066/how-to-intuitively-interpret-gabor-lambda-param/
-•	http://matlabserver.cs.rug.nl/edgedetectionweb/web/edgedetection_params.html
-•	http://www.dis.uniroma1.it/~visiope/Articoli/Texture/Gabor/2002ieee-tip.pdf
-•	http://stackoverflow.com/questions/20608458/gabor-feature-extraction
-•	http://www.sciencedirect.com/science/article/pii/S0031320304003012
-•	http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1042386&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1042386
+*	https://cvtuts.wordpress.com/2014/04/27/gabor-filters-a-practical-overview/
+*	http://answers.opencv.org/question/1066/how-to-intuitively-interpret-gabor-lambda-param/
+*	http://matlabserver.cs.rug.nl/edgedetectionweb/web/edgedetection_params.html
+*	http://www.dis.uniroma1.it/~visiope/Articoli/Texture/Gabor/2002ieee-tip.pdf
+*	http://stackoverflow.com/questions/20608458/gabor-feature-extraction
+*	http://www.sciencedirect.com/science/article/pii/S0031320304003012
+*	http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1042386&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1042386
 
 ###HOG:
-•	http://www.juergenwiki.de/work/wiki/doku.php?id=public%3Ahog_descriptor_computation_and_visualization
-•	http://www.pyimagesearch.com/2014/11/10/histogram-oriented-gradients-object-detection/
+*	http://www.juergenwiki.de/work/wiki/doku.php?id=public%3Ahog_descriptor_computation_and_visualization
+*	http://www.pyimagesearch.com/2014/11/10/histogram-oriented-gradients-object-detection/
 
