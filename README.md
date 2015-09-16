@@ -33,7 +33,7 @@ image 4
 
 When the result is the desired one, the user can push the green tick and save the result. Clicking on the “database” button on the main page, the user can check the images saved and, if necessary, delete some ones. An example of the database if shown in image 5.
 
-|[alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20prima%20parte/Schermata%206.png?raw=true)
+![alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20prima%20parte/Schermata%206.png?raw=true)
 image 5
 
 
@@ -41,10 +41,10 @@ image 5
 
 The second part of the project has the aim to create an automatic software to find hair in images. The main idea is to use the database to extract some features from the images and use that to train a machine learning algorithm. Then the performance of the software will be evaluated with two type of approaches. The first one uses the database created in the first part to train the algorithm. Two set of images will be used to test the machine, the first one is taken from the database, while the second one will be different. The options of this program are:
 
-•	“-f”: enable the calculation of the features (command executed only if the decision tree is calculated)
-•	“-dtree”: enables the calculation of the decision tree
-•	“-cvs”: create csv file containing the training set
-•	“-p”: disable the postprocessing
+*	“-f”: enable the calculation of the features (command executed only if the decision tree is calculated)
+*	“-dtree”: enables the calculation of the decision tree
+*	“-cvs”: create csv file containing the training set
+*	“-p”: disable the postprocessing
 
 obviously the calculation of the features and SVM can be skipped if you have already done and the results were successfully saved in the folder "tmp". The second approach uses the technique of cross-validation on a database of 1000 images with 10 folds. The software train the machine learning algorithm on 900 images and test it on 100. The entire procedure is repeated 10 times replacing the images of the test. This second software hasn’t options implemented, indeed the features and the machine learning algorithm mustn’t be skipped.
 
