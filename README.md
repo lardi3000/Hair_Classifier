@@ -98,10 +98,10 @@ At the end of the prediction, if enabled, it occurs the step of “postprocessin
 image 13
 
 Finally the analysis of the prediction has to be done, based on a map created manually with grabCut. The calculation of accuracy is done considering the cells of HOG. For each cell are considered two values: the predicted and actual one. A cell is considered to be truly hair if 50% + 1 of the pixels of the cell are hair, otherwise background. Moreover the confusion images are created. This images has the same dimension of the prediction image. The colors of this image are:
-•	Green: the true positive pixels, or rather the hair correctly recognized
-•	Blue: the true negative pixels, or rather the background correctly recognized
-•	White: the false positive pixels, or rather the hair badly recognized
-•	Red: the false negative pixels, or rather the background badly recognized
+*	Green: the true positive pixels, or rather the hair correctly recognized
+*	Blue: the true negative pixels, or rather the background correctly recognized
+*	White: the false positive pixels, or rather the hair badly recognized
+*	Red: the false negative pixels, or rather the background badly recognized
 The images 14 and 15 show the confusion images of image 12 and 13.
 
 ![alt tag](https://github.com/lardi3000/Hair_Classifier/blob/master/immagini%20readme/immagini%20seconda%20parte/frame00025_confusion%20senza%20post%20processing.jpg?raw=true)
