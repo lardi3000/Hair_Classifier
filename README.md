@@ -77,15 +77,15 @@ At this point we can associate to every cell 7 descriptors, 5 are taken from HOG
 Now the normalization takes place. Since the output of hog is roughly in a range, thanks to the normalization made by openCv during calculation of the feature, it is only normalized Gabor. The new maximum and minimum values of gabor are the maximum and minimum of HOG.
 
 Once the feaures are calculated (or loaded from a file), begin the training of the decision tree.  The best configuration found use this parameters:
-_ max depth: 25
-_ min sample count: 5
-_ regression accuracy: 0
-_ use surrogates: false
-_ max categories: 15
-_ cv folds: 15
-_ use 1se rule: false
-_ truncate pruned tree: false
-_ priors: NULL
+* max depth: 25
+* min sample count: 5
+* regression accuracy: 0
+* use surrogates: false
+* max categories: 15
+* cv folds: 15
+* use 1se rule: false
+* truncate pruned tree: false
+* priors: NULL
 
 At this point begins the phase of the test, calling the function “predict” for each image to be tested. Initially, the image is cut in a central position, to make the image size proportional to the size of the cell of hog. Based on this image the features (HOG and Gabor) are calculated and are normalized using the same minimum and maximum of the training phase. Then for each cell the value of the prediction of the decision tree is used to decide if each cell is considered hair or background. The image 12 shows an example of a prediction. For this prediction the image shown has not been added to the training set.
 
