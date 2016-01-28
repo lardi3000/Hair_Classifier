@@ -3,10 +3,10 @@
 	require_once('utils.php');
 	start_session();
 	
-	//Legge l'url dell'immagine da caricare	
+	//Legge l'url dell'immagine da caricare
 	$url_image = $_POST['file'];
 	$_SESSION['url_image'] = $url_image;
-			
+		
 	//Controllo se l'immagine ha il flag common creative spuntato
 	if(isset($_POST['cc'])){
 		$_SESSION['common_creative'] = TRUE;
@@ -15,6 +15,7 @@
 		$_SESSION['common_creative'] = FALSE;
 	}	
 	
+
 	$name = substr(strrchr($url_image, "/"), 1 );
 	$new_name=session_id().$name;
 	$complete_path='/opt/lampp/htdocs/hairdetector2/tmp/'.$new_name;

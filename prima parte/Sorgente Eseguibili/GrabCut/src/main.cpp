@@ -2,7 +2,7 @@
 
 /*
  * Versione: numero incrementale che indica quante volte è stato chiamato il prigramma sull'immagine ridimensionata
- * Se versione==-1 richiede il risultato definitivp, quindi chiamo graCut sull'immagine originale
+ * Se version==-1 richiede il risultato definitivp, quindi chiamo graCut sull'immagine originale
  */
 int main(int argc, char ** argv){
 
@@ -18,15 +18,21 @@ int main(int argc, char ** argv){
 	Mat img_resized=imread(path_img_resized,1);
 	//Mappa dell'utente
 	Mat map=imread(path_map,1);
-    string output_filename_resized;
+    string output_filename_resized, final_output;
 
 	/*
 	 * Salvo il risultato ridimensionato con la versione corrente
 	 */
 	ostringstream oss;
-	oss << "_result_" << version;
+    oss << "_result_" << version;
 	string text_to_add=oss.str();
 	output_filename_resized=add_string_before_extension(path_img_resized,text_to_add);
+
+    ostringstream oss_2;
+    oss_2 << "_hair_map";
+    string text_to_add_2=oss_2.str();
+    final_output=add_string_before_extension(path_img_resized,text_to_add_2);
+
 	/*
 	 * Elimino la versione precedente se esiste
 	 */
@@ -82,6 +88,8 @@ int main(int argc, char ** argv){
 
 	resize(result,result,img_resized.size());
 	imwrite(output_filename_resized,result);
+
+    imwrite(final_output,mask_fgpf);
 
 	/*
 	 * Stampo il path del risultato resized per la web app
