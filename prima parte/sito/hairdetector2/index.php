@@ -16,14 +16,14 @@
 		<div id="container">
 			<div class="content">
 				<form action="php/upload_images.php" method="post">
-					<p>Inserisci il link per aggiungere l'immagine al database:</p>
+					<p>Insert the link to add the image to the database:</p>
 					<p><input type="text" name="file" size="50" value="" /></p>
 					<?php 
 						//Controllo dell'url dell'immagine
 						if(isset($_SESSION['img_check']) && $_SESSION['img_check']==TRUE)
 							echo '<p style="color:red">Errore nell\'URL</p>';
 					?>
-					<p><input type="checkbox" name="cc" value="cc" checked="checked"/> Immagine common creative</p>
+					<p><input type="checkbox" name="cc" value="cc" checked="checked"/> Image common creative</p>
 					<p><input type="submit" name="submit" value="Start" /></p>
 				</form>
 			</div>
