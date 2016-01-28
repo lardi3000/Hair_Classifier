@@ -1,5 +1,5 @@
 #Hair Classifier
-##Authors: Fabio Lardizzone, Niccolò Festa
+##Authors: Fabio Lardizzone, Nicolò Festa
 
 
 This project has the purpose to create a software to recognise hair in an image automatically. The method used is to create initially a database of images of hair segmentated manually. At a later stage, a software to train and test a machine learning algorithm.
