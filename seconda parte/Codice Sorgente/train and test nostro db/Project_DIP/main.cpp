@@ -24,7 +24,7 @@ float new_max;
  *
  * Per abilitare le opzioni è possibile aggiungere parametri al lancio
  * del software. I parametri validi sono:
- * -f: abilita il calcolo delle features (comando eseguito solo se viene effettuato il calcolo dell'svm
+ * -f: abilita il calcolo delle features (comando eseguito solo se viene effettuato il calcolo dell'svm)
  * -dtree: abilita il calcolo dell'svm
  * -cvs: crea il file csv contenente il training set
  * -p: disattiva il postProcessing
@@ -59,8 +59,8 @@ int main(int argc, char ** argv){
 
     }
 
-    cout << "Inizio programma." << endl << endl;
-    cout << "Iniziata la fase di training" << endl;
+    cout << "Begin of the software." << endl << endl;
+    cout << "Begin of the training phase." << endl;
 
     double tempo_training = (double) getTickCount();
 
@@ -90,9 +90,9 @@ int main(int argc, char ** argv){
 
     tempo_training = ((double)getTickCount() - tempo_training)/getTickFrequency();
 
-    cout << "Terminata la fase di training!!" << endl;
-    cout << "Tempo necessario per la fase di training: " << tempo_training << " s." << endl << endl;
-    cout << "Inizia la fase di testing!!" << endl;
+    cout << "End of the training phase." << endl;
+    cout << "Time for training: " << tempo_training << " s." << endl << endl;
+    cout << "Begin of the testing phase." << endl;
 
     double tempo_test = (double) getTickCount();
 
@@ -154,16 +154,16 @@ int main(int argc, char ** argv){
 
         tempo_test_tmp = ((double)getTickCount() - tempo_test_tmp)/getTickFrequency();
 
-        cout << "Elaborata l'immagine " << vector_result[i].substr(11, vector_result[i].length());
-        cout << "   Accuracy: " << accuracyTmp << " % capelli riconosciuti: " << percCapelliRiconosciutiTmp;
-        cout << " % sfondo riconosciuto: " << percSfondoRiconosciutoTmp << " % ";
-        cout << "tempo impiegato: " << tempo_test_tmp << " s." << endl;
+        cout << "Computed image " << vector_result[i].substr(11, vector_result[i].length());
+        cout << "   Accuracy: " << accuracyTmp << " % hair recognised: " << percCapelliRiconosciutiTmp;
+        cout << " % background recognised: " << percSfondoRiconosciutoTmp << " % ";
+        cout << "time: " << tempo_test_tmp << " s." << endl;
 
+        file_out << "Computed image " << vector_result[i].substr(11, vector_result[i].length());
+        file_out << "   Accuracy: " << accuracyTmp << " % hair recognised: " << percCapelliRiconosciutiTmp;
+        file_out << " % background recognised: " << percSfondoRiconosciutoTmp << " % ";
+        file_out << "time: " << tempo_test_tmp << " s." << endl;
 
-        file_out << "Elaborata l'immagine " << vector_result[i].substr(11, vector_result[i].length());
-        file_out << "   Accuracy: " << accuracyTmp << " % capelli riconosciuti: " << percCapelliRiconosciutiTmp;
-        file_out << " % sfondo riconosciuto: " << percSfondoRiconosciutoTmp << " % ";
-        file_out << "tempo impiegato: " << tempo_test_tmp << " s." << endl;
 
     }
 
@@ -176,29 +176,29 @@ int main(int argc, char ** argv){
 
     tempo_test = ((double)getTickCount() - tempo_test)/getTickFrequency();
 
-    cout << "Terminata la fase di test!" << endl;
+    cout << "End of the test phase." << endl;
 
-    cout << endl << "Programma terminato!" << endl;
-    cout << "Tempo necessario per la fase di training: " << tempo_training << " s." << endl;
-    cout << "Tempo necessario per la fase di test: " << tempo_test << " s." << endl;
-    cout << "Tempo medio per il test di una singola immagine: " << tempo_test/vector_result.size() << " s." << endl;
+    cout << endl << "Software ended." << endl;
+    cout << "Time for training: " << tempo_training << " s." << endl;
+    cout << "Time for test: " << tempo_test << " s." << endl;
+    cout << "Average time for testing an image: " << tempo_test/vector_result.size() << " s." << endl;
     cout << "Accuracy train: " << accuracyTrain << " %" << endl;
     cout << "Accuracy test: " << accuracyTest << " %" << endl;
-    cout << "Percentuale capelli riconosciuti train: " << percCapelliRiconosciutiTrain << " %" << endl;
-    cout << "Percentuale capelli riconosciuti test: " << percCapelliRiconosciutiTest << " %" << endl;
-    cout << "Percentuale sfondo riconosciuto train: " << percSfondoRiconosciutoTrain << " %" << endl;
-    cout << "Percentuale sfondo riconosciuto test: " << percSfondoRiconosciutoTest << " %" << endl;
+    cout << "Percentage hair recognised train: " << percCapelliRiconosciutiTrain << " %" << endl;
+    cout << "Percentage hair recognised test: " << percCapelliRiconosciutiTest << " %" << endl;
+    cout << "Percentage background recognised train: " << percSfondoRiconosciutoTrain << " %" << endl;
+    cout << "Percentage recognised recognised test: " << percSfondoRiconosciutoTest << " %" << endl;
 
-    file_out << endl << "Programma terminato!" << endl;
-    file_out << "Tempo necessario per la fase di training: " << tempo_training << " s." << endl;
-    file_out << "Tempo necessario per la fase di test: " << tempo_test << " s." << endl;
-    file_out << "Tempo medio per il test di una singola immagine: " << tempo_test/vector_result.size() << " s." << endl;
+    file_out << endl << "Software ended." << endl;
+    file_out << "Time for training: " << tempo_training << " s." << endl;
+    file_out << "Time for test: " << tempo_test << " s." << endl;
+    file_out << "Average time for testing an image: " << tempo_test/vector_result.size() << " s." << endl;
     file_out << "Accuracy train: " << accuracyTrain << " %" << endl;
     file_out << "Accuracy test: " << accuracyTest << " %" << endl;
-    file_out << "Percentuale capelli riconosciuti train: " << percCapelliRiconosciutiTrain << " %" << endl;
-    file_out << "Percentuale capelli riconosciuti test: " << percCapelliRiconosciutiTest << " %" << endl;
-    file_out << "Percentuale sfondo riconosciuto train: " << percSfondoRiconosciutoTrain << " %" << endl;
-    file_out << "Percentuale sfondo riconosciuto test: " << percSfondoRiconosciutoTest << " %" << endl;
+    file_out << "Percentage hair recognised train: " << percCapelliRiconosciutiTrain << " %" << endl;
+    file_out << "Percentage hair recognised test: " << percCapelliRiconosciutiTest << " %" << endl;
+    file_out << "Percentage background recognised train: " << percSfondoRiconosciutoTrain << " %" << endl;
+    file_out << "Percentage recognised recognised test: " << percSfondoRiconosciutoTest << " %" << endl;
 
     file_out.close();
 
@@ -217,7 +217,7 @@ void trainDTree(){
         calculateFeatures(trainingData, labels);
 
         tempo_features = ((double)getTickCount() - tempo_features)/getTickFrequency();
-        cout << "Tempo necessario per calcolare le features: " << tempo_features << " s." << endl;
+        cout << "Time for computing the fatures: " << tempo_features << " s." << endl;
 
         //Salvo i dati necessari per effettuare il training
         FileStorage fsWrite("../tmp/features.yml", FileStorage::WRITE);
@@ -250,7 +250,7 @@ void trainDTree(){
         fsRead.release();
     }
 
-    cout << "Terminato il calcolo del training set." << endl;
+    cout << "End of the computing of the training set." << endl;
 
     CvDTree dtree;
 
@@ -286,7 +286,7 @@ void trainDTree(){
     nomeDTree << "../tmp/dtree.xml";
     dtree.save(nomeDTree.str().c_str());
 
-    cout << "Albero di decisione addestrato." << endl;
+    cout << "Decision tree trained." << endl;
 
 
 }
@@ -361,7 +361,7 @@ void calculateFeatures(Mat &trainingData, Mat &labels){
         localEnergy.push_back(localEnergyTmp);
         meanAmplitude.push_back(meanAmplitudeTmp);
 
-        cout << "Elaborata l'immagine " << numero_immagini_elaborate++ << " di 61." << endl;
+        cout << "Computed image " << numero_immagini_elaborate++ << " di 61." << endl;
 
     }
 
@@ -464,7 +464,7 @@ void calculateFeatures(Mat &trainingData, Mat &labels){
     localEnergy.clear();
     meanAmplitude.clear();
 
-    cout << "dimensione dei dati di training: " << trainingDataVector.size() << endl;
+    cout << "Dimesion of the training data: " << trainingDataVector.size() << endl;
 
     /*
          *

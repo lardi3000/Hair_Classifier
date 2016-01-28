@@ -41,8 +41,8 @@ int main(int argc, char ** argv){
     //Itero lungo tutti i bin
     for(unsigned int binToTest=0; binToTest<numBin; binToTest++){
 
-        cout << endl << endl << "Iniziato il calcolo delle features per il bin " << binToTest+1 << " di " << numBin << "." << endl;
-        file_out << endl << endl << "Iniziata l'elaborazine del bin " << binToTest+1 << " di " << numBin << "." << endl;
+        cout << endl << endl << "Begin of the computation of the features for the bin " << binToTest+1 << " of " << numBin << "." << endl;
+        file_out << endl << endl << "Begin of the computation of the bin " << binToTest+1 << " of " << numBin << "." << endl;
 
         double tempo_features = (double) getTickCount();
 
@@ -56,10 +56,10 @@ int main(int argc, char ** argv){
 
         tempo_features = ((double)getTickCount() - tempo_features)/getTickFrequency();
 
-        cout << "Terminato il calcolo delle features dal db training set." << endl;
-        cout << "Tempo necessario per il calcolo delle features: " << tempo_features << " s." << endl << endl;
+        cout << "Ended the calculation of the features of the training set." << endl;
+        cout << "Time for computing the features: " << tempo_features << " s." << endl << endl;
 
-        cout << "Iniziato l'addestramento dell'albero di decisione." << endl;
+        cout << "Begin of the training of the decision tree." << endl;
 
         double tempo_training = (double) getTickCount();
 
@@ -69,9 +69,9 @@ int main(int argc, char ** argv){
 
         tempo_training = ((double)getTickCount() - tempo_training)/getTickFrequency();
 
-        cout << "Terminata la fase di addestramento dell'albero di decisione!!" << endl;
-        cout << "Tempo necessario per l'addestramento dell'albero di decisione: " << tempo_training << " s." << endl << endl;
-        cout << "Inizia la fase di testing!!" << endl;
+        cout << "End of the training of the decision tree." << endl;
+        cout << "Time for training the decision tree: " << tempo_training << " s." << endl << endl;
+        cout << "Begin of the testing phase." << endl;
 
         double tempo_test = (double) getTickCount();
 
@@ -121,14 +121,14 @@ int main(int argc, char ** argv){
             tempo_test_tmp = ((double)getTickCount() - tempo_test_tmp)/getTickFrequency();
 
             /*
-                    cout << "Elaborata l'immagine " << vectorResult[binToTest][i].substr(11, vectorResult[binToTest][i].length());
-                    cout << "   Accuracy: " << accuracyTmp << " % capelli riconosciuti: " << percCapelliRiconosciutiTmp;
-                    cout << " % sfondo riconosciuto: " << percSfondoRiconosciutoTmp << " % ";
-                    cout << "tempo impiegato: " << tempo_test_tmp << " s." << endl;
+                cout << "Computed image " << vector_result[i].substr(11, vector_result[i].length());
+                cout << "   Accuracy: " << accuracyTmp << " % hair recognised: " << percCapelliRiconosciutiTmp;
+                cout << " % background recognised: " << percSfondoRiconosciutoTmp << " % ";
+                cout << "time: " << tempo_test_tmp << " s." << endl;
              */
 
             if(((++numero_immagini_elaborate)%(imgDb[binToTest].size()/10))==0)
-                cout << "Testate " << numero_immagini_elaborate << " immagini su " << imgDb[binToTest].size()  << "." << endl;
+                cout << "Tested " << numero_immagini_elaborate << " images of " << imgDb[binToTest].size()  << "." << endl;
 
         }
 
@@ -153,29 +153,29 @@ int main(int argc, char ** argv){
         tempoTrainingComplessivo += tempo_training;
         tempoTestComplessivo += tempo_test;
 
-        cout << endl << "Terminata la fase di test per il bin " << binToTest+1 << "!" << endl;
-        cout << "Tempo necessario per il calcolo delle features: " << tempo_features << " s." << endl;
-        cout << "Tempo necessario per l'addestramento dell'albero di decisione: " << tempo_training << " s." << endl;
-        cout << "Tempo necessario per la fase di test: " << tempo_test << " s." << endl;
-        cout << "Tempo medio per il test di una singola immagine: " << tempo_test/(numImg/numBin) << " s." << endl;
+        cout << endl << "Ended the test phase for the bin: " << binToTest+1 << "." << endl;
+        cout << "Time for evaluating the features: " << tempo_features << " s." << endl;
+        cout << "Time to train the decision tree: " << tempo_training << " s." << endl;
+        cout << "Time for the test phase: " << tempo_test << " s." << endl;
+        cout << "Average time for testing one image: " << tempo_test/(numImg/numBin) << " s." << endl;
         cout << "Accuracy: " << accuracyBin << " %" << endl;
-        cout << "Percentuale capelli riconosciuti: " << percCapelliRiconosciutiBin << " %" << endl;
-        cout << "Percentuale sfondo riconosciuto: " << percSfondoRiconosciutoBin << " %" << endl;
-        cout << "Accuracy con post processing: " << accuracyBinConPostProcessing << " %" << endl;
-        cout << "Percentuale capelli riconosciuti con post processing: " << percCapelliRiconosciutiBinConPostProcessing << " %" << endl;
-        cout << "Percentuale sfondo riconosciuto con post processing: " << percSfondoRiconosciutoBinConPostProcessing << " %" << endl;
+        cout << "Percentage hair recognised: " << percCapelliRiconosciutiBin << " %" << endl;
+        cout << "Percentage background recognised: " << percSfondoRiconosciutoBin << " %" << endl;
+        cout << "Accuracy using post processing: " << accuracyBinConPostProcessing << " %" << endl;
+        cout << "Percentage hair recognised using post processing: " << percCapelliRiconosciutiBinConPostProcessing << " %" << endl;
+        cout << "Percentage background recognised using post processing: " << percSfondoRiconosciutoBinConPostProcessing << " %" << endl;
 
-        file_out << endl << "Terminata la fase di test per il bin " << binToTest+1 << "!" << endl;
-        file_out << "Tempo necessario per il calcolo delle features: " << tempo_features << " s." << endl;
-        file_out << "Tempo necessario per l'addestramento dell'albero di decisione: " << tempo_training << " s." << endl;
-        file_out << "Tempo necessario per la fase di test: " << tempo_test << " s." << endl;
-        file_out << "Tempo medio per il test di una singola immagine: " << tempo_test/(numImg/numBin) << " s." << endl;
+        file_out << endl << "Ended the test phase for the bin: " << binToTest+1 << "." << endl;
+        file_out << "Time for evaluating the features: " << tempo_features << " s." << endl;
+        file_out << "Time to train the decision tree: " << tempo_training << " s." << endl;
+        file_out << "Time for the test phase: " << tempo_test << " s." << endl;
+        file_out << "Average time for testing one image: " << tempo_test/(numImg/numBin) << " s." << endl;
         file_out << "Accuracy: " << accuracyBin << " %" << endl;
-        file_out << "Percentuale capelli riconosciuti: " << percCapelliRiconosciutiBin << " %" << endl;
-        file_out << "Percentuale sfondo riconosciuto: " << percSfondoRiconosciutoBin << " %" << endl;
-        file_out << "Accuracy con post processing: " << accuracyConPostProcessing << " %" << endl;
-        file_out << "Percentuale capelli riconosciuti con post processing: " << percCapelliRiconosciutiConPostProcessing << " %" << endl;
-        file_out << "Percentuale sfondo riconosciuto con post processing: " << percSfondoRiconosciutoConPostProcessing << " %" << endl;
+        file_out << "Percentage hair recognised: " << percCapelliRiconosciutiBin << " %" << endl;
+        file_out << "Percentage background recognised: " << percSfondoRiconosciutoBin << " %" << endl;
+        file_out << "Accuracy using post processing: " << accuracyBinConPostProcessing << " %" << endl;
+        file_out << "Percentage hair recognised using post processing: " << percCapelliRiconosciutiBinConPostProcessing << " %" << endl;
+        file_out << "Percentage background recognised using post processing: " << percSfondoRiconosciutoBinConPostProcessing << " %" << endl;
 
     }
 
@@ -187,29 +187,29 @@ int main(int argc, char ** argv){
     percCapelliRiconosciutiConPostProcessing = percCapelliRiconosciutiConPostProcessing / numBin;
     percSfondoRiconosciutoConPostProcessing = percSfondoRiconosciutoConPostProcessing / numBin;
 
-    cout << endl << "Programma terminato!" << endl;
-    cout << "Tempo necessario per il calcolo delle features: " << tempoFeaturesComplessivo << " s." << endl;
-    cout << "Tempo necessario per l'addestramento dell'albero di decisione: " << tempoTrainingComplessivo << " s." << endl;
-    cout << "Tempo necessario per la fase di test: " << tempoTestComplessivo << " s." << endl;
-    cout << "Tempo medio per il test di una singola immagine: " << tempoTestComplessivo/numImg << " s." << endl;
+    cout << endl << "Software ended." << endl;
+    cout << "Time for computing the features: " << tempoFeaturesComplessivo << " s." << endl;
+    cout << "Time for training the decision tree: " << tempoTrainingComplessivo << " s." << endl;
+    cout << "Time for the testing phase: " << tempoTestComplessivo << " s." << endl;
+    cout << "Average time for testing one image: " << tempoTestComplessivo/numImg << " s." << endl;
     cout << "Accuracy: " << accuracy << " %" << endl;
-    cout << "Percentuale capelli riconosciuti: " << percCapelliRiconosciuti << " %" << endl;
-    cout << "Percentuale sfondo riconosciuto: " << percSfondoRiconosciuto << " %" << endl;
-    cout << "Accuracy con post processing: " << accuracyConPostProcessing << " %" << endl;
-    cout << "Percentuale capelli riconosciuti con post processing: " << percCapelliRiconosciutiConPostProcessing << " %" << endl;
-    cout << "Percentuale sfondo riconosciuto con post processing: " << percSfondoRiconosciutoConPostProcessing << " %" << endl;
+    cout << "Percentage hair recognised: " << percCapelliRiconosciuti << " %" << endl;
+    cout << "Percentage background recognised: " << percSfondoRiconosciuto << " %" << endl;
+    cout << "Accuracy using post processing: " << accuracyConPostProcessing << " %" << endl;
+    cout << "Percentage hair recognised using post processing: " << percCapelliRiconosciutiConPostProcessing << " %" << endl;
+    cout << "Percentage background recognised using post processing: " << percSfondoRiconosciutoConPostProcessing << " %" << endl;
 
-    file_out << endl << "Programma terminato!" << endl;
-    file_out << "Tempo necessario per il calcolo delle features: " << tempoFeaturesComplessivo << " s." << endl;
-    file_out << "Tempo necessario per l'addestramento dell'albero di decisione: " << tempoTrainingComplessivo << " s." << endl;
-    file_out << "Tempo necessario per la fase di test: " << tempoTestComplessivo << " s." << endl;
-    file_out << "Tempo medio per il test di una singola immagine: " << tempoTestComplessivo/numImg << " s." << endl;
+    file_out << endl << "Software ended." << endl;
+    file_out << "Time for computing the features: " << tempoFeaturesComplessivo << " s." << endl;
+    file_out << "Time for training the decision tree: " << tempoTrainingComplessivo << " s." << endl;
+    file_out << "Time for the testing phase: " << tempoTestComplessivo << " s." << endl;
+    file_out << "Average time for testing one image: " << tempoTestComplessivo/numImg << " s." << endl;
     file_out << "Accuracy: " << accuracy << " %" << endl;
-    file_out << "Percentuale capelli riconosciuti: " << percCapelliRiconosciuti << " %" << endl;
-    file_out << "Percentuale sfondo riconosciuto: " << percSfondoRiconosciuto << " %" << endl;
-    file_out << "Accuracy con post processing: " << accuracyConPostProcessing << " %" << endl;
-    file_out << "Percentuale capelli riconosciuti con post processing: " << percCapelliRiconosciutiConPostProcessing << " %" << endl;
-    file_out << "Percentuale sfondo riconosciuto con post processing: " << percSfondoRiconosciutoConPostProcessing << " %" << endl;
+    file_out << "Percentage hair recognised: " << percCapelliRiconosciuti << " %" << endl;
+    file_out << "Percentage background recognised: " << percSfondoRiconosciuto << " %" << endl;
+    file_out << "Accuracy using post processing: " << accuracyConPostProcessing << " %" << endl;
+    file_out << "Percentage hair recognised using post processing: " << percCapelliRiconosciutiConPostProcessing << " %" << endl;
+    file_out << "Percentage background recognised using post processing: " << percSfondoRiconosciutoConPostProcessing << " %" << endl;
 
     file_out.close();
 
